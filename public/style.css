@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.headingStyle{
+    color: white;
+    background-color: purple;
+    padding: 10px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.cart{
+    background: yellow;
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 2px 4px 4px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 390px;
+}
+
+.cartTitle{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.cartDesc{
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+.cartFooter{
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+
+.parentClass{
+    background: red;
+}
+
