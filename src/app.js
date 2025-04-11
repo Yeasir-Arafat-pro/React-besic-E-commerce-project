@@ -1,27 +1,65 @@
-import React from 'react';
-//import EventHandler  from './components/onChangeEventHandler';
-//import REACT_HOOKS from './REACT_HOOKS';
-//import ONCHANGE_EVENT from './ONCHANGE_EVENT';
-//import VALUE_ON_PRIVIOUS_STATE from './VALUE_ON_PRIVIOUS_STATE';
-//import EVENT_BUBLING_WITH_STOP_PROPAGATION from './EVENT_BUBLING_WITH_STOP_PROPAGATION';
-//import FORM from './FORM';
-/* import Child from './STATE_LIFTING/Child';
-const handleChildData = (childData) => {
-  console.log("App: "+childData);
-  
-} */
-import Home from './TODO_COMPONENT_PROJECT/Home';
-//import STATE from './components/STATE';
-// import { FaBeer } from 'react-icons/fa';
-// import Cart from './components/Cart'
-// import Data from './data.json'
+import React, { useState } from "react";
+import "./App.css";
+
+import Home from "./pages/Home";
+import Blogs from "./pages/Blogs";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
+import User from "./pages/User";
+import Error from "./pages/404";
+
+import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
+import Protected from "./Protected/Protected";
+
+
 const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  
+  return (
+    <BrowserRouter>
+      <nav>
+        <NavLink className="nav-link" to="/">
+          Home
+        </NavLink>
+        <NavLink className="nav-link" to="/blogs">
+          Blogs
+        </NavLink>
+        <NavLink className="nav-link" to="/contact">
+          Contact
+        </NavLink>
+        <NavLink className="nav-link" to="/user">
+          User
+        </NavLink>
+      </nav>
 
-  return <>
-                <Home/>
-  </>
-}
+      {isLoggedIn ? (
+        <button
+          onClick={() => {
+            setIsLoggedIn(!isLoggedIn);
+          }}
+        >
+          Logout
+        </button>
+      ) : (
+        <button onClick={() => {
+          setIsLoggedIn(!isLoggedIn);
+        }}>login</button>
+      )}
 
-export default App
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:title" element={<Blog />} />
+        <Route path="/user" element={
+          <Protected isLoggedIn={isLoggedIn}>
+            <User />
+          </Protected>
+        } />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default App;

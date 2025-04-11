@@ -1,0 +1,50 @@
+nav {
+    background-color: black;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.nav-link{
+    text-decoration: none;
+    color: orangered;
+    margin: auto 1rem;
+
+}
+
+.nav-link:hover{
+    color: rgb(204, 1, 1);
+    
+}
+
+ nav .active{
+    color: white;
+    
+}
+
+.blogsData{
+    display: grid;
+    grid-gap: 1rem;
+    
+}
+
+.blogsData article {
+    background-color: aliceblue;
+}
+
+@media screen and (min-width:600px){
+    .blogsData{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width:960px){
+    .blogsData{
+        grid-template-columns: auto auto auto;
+    }
+}
+
+

@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
 }
@@ -42,4 +42,9 @@
 .parentClass{
     background: red;
 }
+ */
 
+ section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+ }
