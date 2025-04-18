@@ -1,0 +1,82 @@
+/* Ensure the footer sticks to the bottom */
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.con {
+  flex: 1; /* Pushes the footer to the bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: #0abf53; /* Primary Green */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.footer div {
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0;
+  color: #f9fafb;
+}
+
+.footer input {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  margin-right: 10px;
+  width: 200px;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer input:focus {
+  box-shadow: 0 0 5px rgba(10, 191, 83, 0.5);
+}
+
+.footer button {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #2563eb; /* Secondary Blue */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer button:hover {
+  background-color: #1d4ed8; /* Darker Blue */
+  transform: translateY(-2px);
+}
+
+.footer button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .footer button {
+    width: 100%;
+  }
+}

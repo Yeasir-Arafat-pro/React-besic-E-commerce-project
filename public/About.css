@@ -1,0 +1,42 @@
+/* General Styles */
+.aboutPage {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .aboutPage h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .aboutPage p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .aboutPage {
+      padding: 15px;
+      margin: 20px;
+    }
+  
+    .aboutPage h1 {
+      font-size: 28px;
+    }
+  
+    .aboutPage p {
+      font-size: 14px;
+    }
+  }

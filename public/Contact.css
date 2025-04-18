@@ -1,0 +1,91 @@
+/* General Styles */
+.contactPage {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contactPage h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  /* Form Styles */
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 2rem;
+
+  }
+  
+.contactForm .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contactForm .formGroup label {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .contactForm .formGroup input,
+  .contactForm .formGroup textarea {
+    padding: 10px;
+    width: 25rem; /* Set width to 100% */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contactForm .formGroup input:focus,
+  .contactForm .formGroup textarea:focus {
+    border-color: #0abf53; /* Primary Green */
+    box-shadow: 0 0 5px rgba(10, 191, 83, 0.5);
+  }
+  
+  /* Button Styles */
+  .contactForm button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0abf53; /* Primary Green */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .contactForm button:hover {
+    background-color: #0aa94d; /* Hover Green */
+    transform: translateY(-2px);
+  }
+  
+  .contactForm button:active {
+    transform: translateY(0);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .contactPage {
+      margin: 20px;
+      padding: 15px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
